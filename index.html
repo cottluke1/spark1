@@ -102,8 +102,8 @@
              padding: 0.75rem 0.25rem;
         }
         .contact-input:focus {
-            outline: none;
-            border-bottom-color: var(--accent);
+             outline: none;
+             border-bottom-color: var(--accent);
         }
         
         .testimonial-quote {
@@ -130,7 +130,7 @@
       "name": "Isabella Rossi",
       "image": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop",
       "telephone": "+1-321-654-987",
-      "email": "lukecott29@icloud.com",
+      "email": "isabella.rossi@curatedliving.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "123 Serenity Drive",
@@ -278,7 +278,7 @@
                         </div>
                         <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Marcus Thorne</p>
                     </div>
-                 </div>
+                   </div>
             </div>
         </section>
 
@@ -290,7 +290,7 @@
                     <p class="text-[var(--text-secondary)] mt-4 mb-8 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">I invite you to schedule a private consultation to discuss your real estate aspirations. Reach out directly or use the form below.</p>
                     
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="150">
-                        <a href="mailto:lukecott29@icloud.com" class="btn w-full sm:w-auto">
+                        <a href="mailto:isabella.rossi@curatedliving.com" class="btn w-full sm:w-auto">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             Email Directly
                         </a>
@@ -302,13 +302,14 @@
                 </div>
 
                 <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    <form id="contact-form" action="mailto:lukecott29@icloud.com" method="post" enctype="text/plain">
+                    <!-- UPDATED: Form action points to Formspree -->
+                    <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-6">
-                            <input type="text" name="Full_Name" placeholder="Full Name" class="w-full contact-input" required>
-                            <input type="email" name="Email_Address" placeholder="Email Address" class="w-full contact-input" required>
+                            <input type="text" name="name" placeholder="Full Name" class="w-full contact-input" required>
+                            <input type="email" name="email" placeholder="Email Address" class="w-full contact-input" required>
                         </div>
                         <div class="mb-8">
-                            <textarea name="Message" placeholder="Your Message" rows="3" class="w-full contact-input" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="3" class="w-full contact-input" required></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn">Send Inquiry</button>
@@ -324,25 +325,25 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
                  <div class="md:col-span-1">
-                     <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
-                     <p class="text-sm text-[var(--text-secondary)] mt-2">Curated Living</p>
-                 </div>
+                    <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
+                    <p class="text-sm text-[var(--text-secondary)] mt-2">Curated Living</p>
+                </div>
                  <div class="md:col-span-1">
-                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Navigate</h4>
-                     <a href="#about" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">About</a>
-                     <a href="#listings" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Properties</a>
-                     <a href="#services" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Services</a>
-                 </div>
+                    <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Navigate</h4>
+                    <a href="#about" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">About</a>
+                    <a href="#listings" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Properties</a>
+                    <a href="#services" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Services</a>
+                </div>
                  <div class="md:col-span-1">
-                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Connect</h4>
-                     <div class="flex justify-center md:justify-start space-x-4 mb-4">
+                    <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                    <div class="flex justify-center md:justify-start space-x-4 mb-4">
                         <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Instagram</a>
                         <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Pinterest</a>
                         <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">LinkedIn</a>
-                     </div>
-                     <a href="mailto:lukecott29@icloud.com" class="text-sm text-[var(--text-secondary)] hover:text-accent-color transition">lukecott29@icloud.com</a>
-                     <a href="tel:+13216549870" class="block text-sm text-[var(--text-secondary)] hover:text-accent-color transition mt-1">+1 (321) 654-9870</a>
-                 </div>
+                    </div>
+                    <a href="mailto:isabella.rossi@curatedliving.com" class="text-sm text-[var(--text-secondary)] hover:text-accent-color transition">isabella.rossi@curatedliving.com</a>
+                    <a href="tel:+13216549870" class="block text-sm text-[var(--text-secondary)] hover:text-accent-color transition mt-1">+1 (321) 654-9870</a>
+                </div>
             </div>
             <div class="mt-20 pt-8 border-t border-[var(--border-color)] text-center text-xs text-gray-400">
                 <p>&copy; <span id="year"></span> Isabella Rossi Real Estate. Design inspired by bespoke digital studios.</p>
@@ -388,20 +389,45 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Contact Form Handler
+        // UPDATED: Modern Contact Form Handler using Fetch and Formspree
         const contactForm = document.getElementById('contact-form');
         const formMessage = document.getElementById('form-message');
+
         contactForm.addEventListener('submit', function(e) {
-            // The mailto: action will handle the submission.
-            // This script provides a fallback confirmation message.
-            setTimeout(() => {
-                formMessage.textContent = 'Thank you! Your email client has been opened to send your inquiry.';
-                contactForm.reset();
-            }, 500); // Small delay to allow mail client to open
+            e.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(contactForm);
+            const formAction = contactForm.getAttribute('action');
             
-            setTimeout(() => {
+            formMessage.textContent = 'Sending...';
+
+            fetch(formAction, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formMessage.textContent = 'Thank you! Your inquiry has been sent.';
+                    contactForm.reset(); // Clear the form fields
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                           formMessage.textContent = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                           formMessage.textContent = 'Oops! There was a problem submitting your form.';
+                        }
+                    })
+                }
+            }).catch(error => {
+                formMessage.textContent = 'Oops! There was a problem submitting your form.';
+            });
+
+            // Clear the message after 6 seconds
+             setTimeout(() => {
                 formMessage.textContent = '';
-            }, 6000); // Clear message after 6 seconds
+            }, 6000); 
         });
     </script>
 </body>
