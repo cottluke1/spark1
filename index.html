@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabella Rossi | Curated Living</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Isabella Rossi offers a bespoke real estate experience, specializing in architecturally significant homes and curated lifestyles in The Woodlands.">
+    <meta name="keywords" content="luxury realtor, the woodlands real estate, curated homes, architectural homes, bespoke real estate services, Isabella Rossi">
+    <meta name="author" content="Isabella Rossi">
+
+    <!-- Social Media Meta Tags (Open Graph) -->
+    <meta property="og:title" content="Isabella Rossi | Curated Living">
+    <meta property="og:description" content="A bespoke approach to buying and selling extraordinary homes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2940&auto=format&fit=crop">
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles & Configuration -->
+    <style>
+        :root {
+            --background: #F8F7F5; /* Softer, more textured off-white */
+            --text-primary: #33312E; /* Dark, warm charcoal */
+            --text-secondary: #7A746C;
+            --accent: #A38C7A; /* Earthy, sophisticated taupe */
+            --border-color: #EAE8E4;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .accent-color { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2874&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(248, 247, 245, 0.95);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            border-bottom-width: 1px;
+            border-color: var(--border-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+        .btn:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(163, 140, 122, 0.2);
+        }
+        
+        .listing-card {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .listing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-input {
+             background: transparent;
+             border: none;
+             border-bottom: 1px solid var(--border-color);
+             transition: border-color 0.3s;
+             padding: 0.75rem 0.25rem;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-bottom-color: var(--accent);
+        }
+        
+        .testimonial-quote {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .testimonial-quote::before {
+            content: '“';
+            position: absolute;
+            left: 0;
+            top: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--border-color);
+            line-height: 1;
+        }
+        
+    </style>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Isabella Rossi",
+      "image": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop",
+      "telephone": "+1-321-654-987",
+      "email": "isabella.rossi@curatedhomes.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Serenity Drive",
+        "addressLocality": "The Woodlands",
+        "addressRegion": "TX",
+        "postalCode": "77380",
+        "addressCountry": "US"
+      },
+      "url": "#",
+      "priceRange": "$$$$"
+    }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Sticky Navigation -->
+    <header id="navbar" class="sticky-nav">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-accent-color transition duration-300">About</a>
+                    <a href="#listings" class="hover:text-accent-color transition duration-300">Properties</a>
+                    <a href="#services" class="hover:text-accent-color transition duration-300">Services</a>
+                    <a href="#contact" class="btn">Inquire</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[var(--background)]">
+            <a href="#about" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">About</a>
+            <a href="#listings" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">Properties</a>
+            <a href="#services" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">Services</a>
+            <a href="#contact" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-b border-[var(--border-color)]">Inquire</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-[90vh] flex items-center justify-center text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-playfair leading-tight mb-4" data-aos="fade-up">A Bespoke Approach to Extraordinary Homes.</h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Guiding you to the intersection of architecture, design, and home.</p>
+            </div>
+        </section>
+        
+        <!-- Intro/About Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <div class="md:w-5/12 relative" data-aos="fade-right">
+                        <div class="absolute -top-8 -left-8 w-full h-full border-2 border-accent-color/20 rounded-lg"></div>
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop" alt="Isabella Rossi" class="rounded-lg w-full h-auto object-cover relative z-10 shadow-xl">
+                    </div>
+                    <div class="md:w-7/12" data-aos="fade-left" data-aos-delay="100">
+                        <h2 class="text-3xl md:text-4xl font-playfair mb-6">More than an agent, a partner in your real estate journey.</h2>
+                        <p class="text-[var(--text-secondary)] mb-6 leading-relaxed">My practice is built on the belief that a home is the most vital part of our lives—a sanctuary for rest, a space for connection, and a canvas for self-expression. I blend market expertise with a genuine passion for design and architecture to provide a client experience that is both seamless and inspiring. My commitment is to not only meet your expectations but to exceed them, ensuring every transaction is handled with discretion, integrity, and exceptional care.</p>
+                        <a href="#contact" class="font-semibold hover:text-accent-color transition-colors duration-300 group">
+                            Begin the Conversation <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Properties Section -->
+        <section id="listings" class="py-20 md:py-32 bg-white/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">Featured Properties</h2>
+                    <p class="text-[var(--text-secondary)]" data-aos="fade-up" data-aos-delay="100">A curated selection of architecturally significant homes currently available.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Listing Card 1 -->
+                    <div data-aos="fade-up">
+                        <div class="listing-card bg-white">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2940&auto=format&fit=crop" alt="Modernist Lakefront Estate" class="w-full h-80 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-playfair mb-2">Modernist Lakefront Estate</h3>
+                                <p class="text-[var(--text-secondary)] mb-4">The Woodlands, TX</p>
+                                <p class="text-xl font-medium">$3,150,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Listing Card 2 -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="listing-card bg-white">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1600585152225-357EA62c7a97?q=80&w=2940&auto=format&fit=crop" alt="The Oak Ridge Residence" class="w-full h-80 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-playfair mb-2">The Oak Ridge Residence</h3>
+                                <p class="text-[var(--text-secondary)] mb-4">Conroe, TX</p>
+                                <p class="text-xl font-medium">$2,800,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-16" data-aos="fade-up">
+                    <a href="#" class="btn">Explore All Properties</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">A Concierge Level of Service</h2>
+                    <p class="text-[var(--text-secondary)]" data-aos="fade-up" data-aos-delay="100">Tailored strategies and dedicated support, from the initial consultation to the final closing and beyond.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="text-center p-6" data-aos="fade-up">
+                        <h3 class="text-xl font-playfair mb-3">Strategic Acquisitions</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">For buyers, a discreet and discerning search for properties—both on and off-market—that align perfectly with your lifestyle and investment goals.</p>
+                    </div>
+                    <div class="text-center p-6 border-x border-[var(--border-color)]" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-playfair mb-3">Bespoke Marketing</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">For sellers, a sophisticated marketing approach, utilizing cinematic videography, architectural photography, and targeted digital campaigns.</p>
+                    </div>
+                    <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-playfair mb-3">Design Consultation</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">Advisory services on interior styling, staging, and architectural enhancements to maximize a property's value and appeal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="py-20 md:py-32 bg-white/50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                    <div class="testimonial-quote">
+                        <p class="text-xl md:text-2xl font-light leading-relaxed mb-6">"Isabella possesses a rare combination of market savvy and impeccable taste. She transformed what could have been a stressful process into a seamless, elegant experience. We couldn't be happier with the outcome and the beautiful home she helped us find."</p>
+                    </div>
+                    <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- The Atherton Family</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-playfair" data-aos="fade-up">Let's Begin the Journey</h2>
+                    <p class="text-[var(--text-secondary)] mt-4 mb-12 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">I invite you to schedule a private consultation to discuss your real estate aspirations.</p>
+                </div>
+                <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-6">
+                            <input type="text" placeholder="Full Name" class="w-full contact-input" required>
+                            <input type="email" placeholder="Email Address" class="w-full contact-input" required>
+                        </div>
+                        <div class="mb-8">
+                            <textarea placeholder="Your Message" rows="3" class="w-full contact-input" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn">Send Inquiry</button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="text-center mt-6 text-[var(--accent)]"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+                 <div class="md:col-span-1">
+                     <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
+                     <p class="text-sm text-[var(--text-secondary)] mt-2">Curated Living</p>
+                 </div>
+                 <div class="md:col-span-1">
+                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Navigate</h4>
+                     <a href="#about" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">About</a>
+                     <a href="#listings" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Properties</a>
+                     <a href="#services" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Services</a>
+                 </div>
+                 <div class="md:col-span-1">
+                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                     <div class="flex justify-center md:justify-start space-x-4 mb-4">
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Instagram</a>
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Pinterest</a>
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">LinkedIn</a>
+                     </div>
+                     <p class="text-sm text-[var(--text-secondary)]">isabella.rossi@curatedhomes.com</p>
+                 </div>
+            </div>
+            <div class="mt-20 pt-8 border-t border-[var(--border-color)] text-center text-xs text-gray-400">
+                <p>&copy; <span id="year"></span> Isabella Rossi Real Estate. Design inspired by bespoke digital studios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate on Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Navigation Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        };
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formMessage.textContent = 'Thank you for your inquiry. I will be in touch shortly.';
+            contactForm.reset();
+            setTimeout(() => {
+                formMessage.textContent = '';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
