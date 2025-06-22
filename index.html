@@ -28,7 +28,7 @@
             --background: #FFFFFF; 
             --text-primary: #1A1A1A;
             --text-secondary: #6B7280;
-            --accent: #B8860B; /* Muted Gold */
+            --accent: #0D9488; /* Teal */
             --border-color: #F0F0F0;
         }
 
@@ -46,7 +46,6 @@
         .bg-accent { background-color: var(--accent); }
         .border-accent { border-color: var(--accent); }
         
-        /* Updated hero-bg to remove the white fade and add a subtle dark overlay for text contrast */
         .hero-bg {
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2874&auto=format&fit=crop');
             background-size: cover;
@@ -64,20 +63,45 @@
             transition: all 0.3s ease-in-out;
         }
         
+        /* Initial Header styles: transparent background, black text */
+        #navbar a, #navbar button {
+            color: var(--text-primary);
+            text-shadow: none;
+            transition: color 0.3s ease-in-out;
+        }
+        #navbar .btn {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+            background-color: transparent;
+        }
+        #navbar .btn:hover {
+            background-color: var(--text-primary);
+            color: white;
+        }
+        #navbar a:not(.btn):hover {
+            color: var(--accent);
+        }
+
+        /* Scrolled Header styles */
         .nav-scrolled {
             background-color: rgba(255, 255, 255, 0.98);
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
             border-bottom-width: 1px;
             border-color: var(--border-color);
         }
-         .nav-scrolled a {
+         .nav-scrolled a, .nav-scrolled button {
              color: var(--text-primary) !important;
+             text-shadow: none !important;
          }
-         .nav-scrolled a.btn {
+         .nav-scrolled a:not(.btn):hover {
+            color: var(--accent) !important;
+         }
+         .nav-scrolled .btn {
              color: var(--accent) !important;
              border-color: var(--accent) !important;
+             background-color: transparent !important;
          }
-          .nav-scrolled a.btn:hover {
+          .nav-scrolled .btn:hover {
              background-color: var(--accent) !important;
              color: white !important;
          }
@@ -98,7 +122,7 @@
             background-color: var(--accent);
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(184, 134, 11, 0.2);
+            box-shadow: 0 4px 10px rgba(13, 148, 136, 0.2);
         }
         
         .listing-card {
@@ -111,7 +135,6 @@
             box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
         }
 
-        /* New style for individual testimonial cards */
         .testimonial-card {
             background-color: white;
             border: 1px solid var(--border-color);
@@ -148,17 +171,17 @@
     <header id="navbar" class="sticky-nav">
         <div class="container mx-auto px-6 py-5">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-playfair font-medium tracking-wide text-black">Isabella Rossi</a>
+                <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
                 
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-700 hover:accent-color transition duration-300">About</a>
-                    <a href="#listings" class="text-gray-700 hover:accent-color transition duration-300">Properties</a>
-                    <a href="#testimonials" class="text-gray-700 hover:accent-color transition duration-300">Testimonials</a>
+                    <a href="#about" class="transition duration-300">About</a>
+                    <a href="#listings" class="transition duration-300">Properties</a>
+                    <a href="#testimonials" class="transition duration-300">Testimonials</a>
                     <a href="#contact" class="btn">Contact</a>
                 </nav>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="focus:outline-none text-black">
+                    <button id="mobile-menu-button" class="focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16"></path></svg>
                     </button>
                 </div>
@@ -174,7 +197,6 @@
     </header>
 
     <main>
-        <!-- Hero section updated with white text for better readability against the darker background -->
         <section class="hero-bg min-h-[90vh] flex items-center justify-center text-white">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-playfair leading-tight mb-4 hero-text" data-aos="fade-up">A Bespoke Approach to Extraordinary Homes.</h1>
@@ -187,7 +209,7 @@
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
                     <div class="md:w-5/12 relative" data-aos="fade-right">
                         <div class="absolute -top-8 -left-8 w-full h-full border-2 border-accent-color/20 rounded-lg"></div>
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop" alt="Isabella Rossi" class="rounded-lg w-full h-auto object-cover relative z-10 shadow-xl">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EEE/31343C?text=Isabella';" alt="Isabella Rossi" class="rounded-lg w-full h-auto object-cover relative z-10 shadow-xl">
                     </div>
                     <div class="md:w-7/12" data-aos="fade-left" data-aos-delay="100">
                         <h2 class="text-3xl md:text-4xl font-playfair mb-6">More than an agent, a partner in your real estate journey.</h2>
@@ -209,7 +231,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
                     <div data-aos="fade-up">
                         <div class="listing-card bg-white">
-                            <img loading="lazy" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2940&auto=format&fit=crop" alt="Modernist Lakefront Estate" class="w-full h-80 object-cover">
+                            <img loading="lazy" src="https://nypost.com/wp-content/uploads/sites/2/2024/07/gimme-2700-85596881.jpg?quality=75&strip=all&w=1024" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EEE/31343C?text=Modern+Estate';" alt="Modernist Lakefront Estate" class="w-full h-80 object-cover">
                             <div class="p-8">
                                 <h3 class="text-2xl font-playfair mb-2">Modernist Lakefront Estate</h3>
                                 <p class="text-[var(--text-secondary)] mb-4">The Woodlands, TX</p>
@@ -219,7 +241,7 @@
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100">
                         <div class="listing-card bg-white">
-                            <img loading="lazy" src="https://images.unsplash.com/photo-1600585152225-357EA62c7a97?q=80&w=2940&auto=format&fit=crop" alt="The Oak Ridge Residence" class="w-full h-80 object-cover">
+                            <img loading="lazy" src="https://townsquare.media/site/192/files/2024/08/attachment-3800-miramar-ave-highland-park-tx-75205-mls-20676418-zillow.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EEE/31343C?text=Oak+Ridge';" alt="The Oak Ridge Residence" class="w-full h-80 object-cover">
                             <div class="p-8">
                                 <h3 class="text-2xl font-playfair mb-2">The Oak Ridge Residence</h3>
                                 <p class="text-[var(--text-secondary)] mb-4">Conroe, TX</p>
@@ -231,28 +253,24 @@
             </div>
         </section>
         
-        <!-- Testimonials Section: Updated to a stacked layout -->
         <section id="testimonials" class="py-20 md:py-32 bg-gray-50">
              <div class="container mx-auto px-6">
                   <h2 class="text-3xl md:text-4xl font-playfair text-center mb-16" data-aos="fade-up">Words from My Clients</h2>
                   
                   <div class="max-w-3xl mx-auto grid grid-cols-1 gap-12" data-aos="fade-up" data-aos-delay="100">
                       
-                      <!-- Testimonial 1 -->
                       <div class="testimonial-card text-center">
                           <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
                           <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"Isabella possesses a rare combination of market savvy and impeccable taste. She transformed what could have been a stressful process into a seamless, elegant experience. We couldn't be happier with the outcome and the beautiful home she helped us find."</p>
                           <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- The Atherton Family</p>
                       </div>
 
-                      <!-- Testimonial 2 -->
                       <div class="testimonial-card text-center">
                            <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
                           <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"From the initial consultation to the final closing, Isabella's professionalism and dedication were second to none. Her marketing strategy was brilliant, attracting the perfect buyers in a matter of days. We are immensely grateful for her guidance."</p>
                           <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Dr. and Mrs. Chen</p>
                       </div>
 
-                      <!-- Testimonial 3 -->
                        <div class="testimonial-card text-center">
                            <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"As an architect, I was particular about finding an agent who understood design. Isabella's appreciation for architecture is palpable. She didn't just sell a house; she sold a vision. Her expertise was invaluable."</p>
@@ -327,7 +345,6 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            // Change icon to 'X' when menu is open
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16"></path>`;
             } else {
@@ -335,7 +352,6 @@
             }
         });
         
-        // Close mobile menu when a link is clicked
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
