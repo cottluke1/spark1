@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johnathan Sterling | Elite Real Estate</title>
+    <title>Isabella Rossi | Curated Living</title>
     
-    <meta name="description" content="Sell faster and buy smarter with Johnathan Sterling, the leading realtor in the local market. Specializing in luxury properties and strategic marketing.">
-    <meta name="keywords" content="realtor, real estate, luxury homes, property listing, home buying, home selling, local market expert">
-    <meta name="author" content="Johnathan Sterling">
+    <meta name="description" content="Isabella Rossi offers a bespoke real estate experience, specializing in architecturally significant homes and curated lifestyles in The Woodlands.">
+    <meta name="keywords" content="luxury realtor, the woodlands real estate, curated homes, architectural homes, bespoke real estate services, Isabella Rossi">
+    <meta name="author" content="Isabella Rossi">
 
-    <meta property="og:title" content="Johnathan Sterling | Elite Real Estate">
-    <meta property="og:description" content="Dominating the local market with unparalleled service and results.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2874&auto=format&fit=crop">
+    <meta property="og:title" content="Isabella Rossi | Curated Living">
+    <meta property="og:description" content="A bespoke approach to buying and selling extraordinary homes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2940&auto=format&fit=crop">
     <meta property="og:url" content="#">
     <meta property="og:type" content="website">
 
@@ -19,368 +19,334 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
+        :root {
+            --background: #F8F7F5; /* Softer, more textured off-white */
+            --text-primary: #33312E; /* Dark, warm charcoal */
+            --text-secondary: #7A746C;
+            --accent: #A38C7A; /* Earthy, sophisticated taupe */
+            --border-color: #EAE8E4;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FDFDFD;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .font-playfair {
             font-family: 'Playfair Display', serif;
         }
-        .accent-gold {
-            color: #CAA472; /* Updated modern gold */
-        }
-        .bg-accent-gold {
-            background-color: #CAA472; /* Updated modern gold */
-        }
-        .border-accent-gold {
-            border-color: #CAA472; /* Updated modern gold */
-        }
+        .accent-color { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+        
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2874&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Parallax effect */
         }
+
         .sticky-nav {
             position: sticky;
             top: 0;
             z-index: 50;
             transition: all 0.3s ease-in-out;
         }
-        .testimonial-card {
-            min-width: 300px;
+        
+        .nav-scrolled {
+            background-color: rgba(248, 247, 245, 0.95);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            border-bottom-width: 1px;
+            border-color: var(--border-color);
         }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+        }
+        .btn:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(163, 140, 122, 0.2);
+        }
+        
+        .listing-card {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .listing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-input {
+             background: transparent;
+             border: none;
+             border-bottom: 1px solid var(--border-color);
+             transition: border-color 0.3s;
+             padding: 0.75rem 0.25rem;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-bottom-color: var(--accent);
+        }
+        
+        .testimonial-quote {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .testimonial-quote::before {
+            content: '“';
+            position: absolute;
+            left: 0;
+            top: -1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--border-color);
+            line-height: 1;
+        }
+        
     </style>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
-      "name": "Johnathan Sterling",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop",
-      "telephone": "+1-234-567-890",
-      "email": "johnathan.sterling@eliterealty.com",
+      "name": "Isabella Rossi",
+      "image": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop",
+      "telephone": "+1-321-654-987",
+      "email": "lukecott29@icloud.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Luxury Lane",
-        "addressLocality": "Beverly Hills",
-        "addressRegion": "CA",
-        "postalCode": "90210",
+        "streetAddress": "123 Serenity Drive",
+        "addressLocality": "The Woodlands",
+        "addressRegion": "TX",
+        "postalCode": "77380",
         "addressCountry": "US"
       },
       "url": "#",
-      "priceRange": "$$$$",
-       "hasMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733528751841!2d-118.4018053847844!3d34.07362228060699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d67b35%3A0x29c4e8a4d5e1d2c!2sBeverly%20Hills%20Sign!5e0!3m2!1sen!2sus!4v1678886555555!5m2!1sen!2sus"
+      "priceRange": "$$$$"
     }
     </script>
 </head>
-<body class="text-gray-800">
+<body class="antialiased">
 
-    <header id="navbar" class="sticky-nav bg-white bg-opacity-95 backdrop-blur-sm shadow-md">
-        <div class="container mx-auto px-6 py-4">
+    <header id="navbar" class="sticky-nav">
+        <div class="container mx-auto px-6 py-5">
             <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold font-playfair text-gray-900">Johnathan Sterling</a>
+                <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
                 
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-accent-gold transition">About</a>
-                    <a href="#listings" class="text-gray-600 hover:text-accent-gold transition">Sold Properties</a>
-                    <a href="#testimonials" class="text-gray-600 hover:text-accent-gold transition">Testimonials</a>
-                    <a href="#services" class="text-gray-600 hover:text-accent-gold transition">Services</a>
-                    <a href="#contact" class="text-gray-600 hover:text-accent-gold transition">Contact</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="hover:text-accent-color transition duration-300">About</a>
+                    <a href="#listings" class="hover:text-accent-color transition duration-300">Properties</a>
+                    <a href="#services" class="hover:text-accent-color transition duration-300">Services</a>
+                    <a href="#contact" class="btn">Inquire</a>
                 </nav>
 
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">About</a>
-            <a href="#listings" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Sold Properties</a>
-            <a href="#testimonials" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Testimonials</a>
-            <a href="#services" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Services</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[var(--background)]">
+            <a href="#about" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">About</a>
+            <a href="#listings" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">Properties</a>
+            <a href="#services" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-[var(--border-color)]">Services</a>
+            <a href="#contact" class="block py-3 px-6 text-base hover:bg-gray-50 border-t border-b border-[var(--border-color)]">Inquire</a>
         </div>
     </header>
 
     <main>
-        <section class="hero-bg text-white h-[90vh] flex items-center">
+        <section class="hero-bg min-h-[90vh] flex items-center justify-center text-white">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl lg:text-7l font-playfair font-bold mb-4" data-aos="fade-up">Sell Faster. Buy Smarter.</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">Your neighborhood expert, your competitive edge in the market.</p>
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <a href="#contact" class="bg-accent-gold hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105">
-                        Book a Free Listing Strategy Call
-                    </a>
-                </div>
-                <div class="mt-8 flex justify-center space-x-6" data-aos="fade-up" data-aos-delay="600">
-                    <a href="mailto:johnathan.sterling@eliterealty.com" class="flex items-center space-x-2 hover:underline">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                        <span>Email</span>
-                    </a>
-                    <a href="tel:+1234567890" class="flex items-center space-x-2 hover:underline">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a11.024 11.024 0 005.418 5.418l.759-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V5a1 1 0 011-1h.5z"></path></svg>
-                        <span>Call Now</span>
-                    </a>
+                <h1 class="text-4xl md:text-6xl font-playfair leading-tight mb-4" data-aos="fade-up">A Bespoke Approach to Extraordinary Homes.</h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Guiding you to the intersection of architecture, design, and home.</p>
+            </div>
+        </section>
+        
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <div class="md:w-5/12 relative" data-aos="fade-right">
+                        <div class="absolute -top-8 -left-8 w-full h-full border-2 border-accent-color/20 rounded-lg"></div>
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?q=80&w=2874&auto=format&fit=crop" alt="Isabella Rossi" class="rounded-lg w-full h-auto object-cover relative z-10 shadow-xl">
+                    </div>
+                    <div class="md:w-7/12" data-aos="fade-left" data-aos-delay="100">
+                        <h2 class="text-3xl md:text-4xl font-playfair mb-6">More than an agent, a partner in your real estate journey.</h2>
+                        <p class="text-[var(--text-secondary)] mb-6 leading-relaxed">My practice is built on the belief that a home is the most vital part of our lives—a sanctuary for rest, a space for connection, and a canvas for self-expression. I blend market expertise with a genuine passion for design and architecture to provide a client experience that is both seamless and inspiring. My commitment is to not only meet your expectations but to exceed them, ensuring every transaction is handled with discretion, integrity, and exceptional care.</p>
+                        <a href="#contact" class="font-semibold hover:text-accent-color transition-colors duration-300 group">
+                            Begin the Conversation <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1">&rarr;</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gray-50">
-             <div class="container mx-auto px-6 py-12">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <section id="listings" class="py-20 md:py-32 bg-white/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">Recently Sold</h2>
+                    <p class="text-[var(--text-secondary)]" data-aos="fade-up" data-aos-delay="100">A look at some of the remarkable homes we have recently had the pleasure of representing.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
                     <div data-aos="fade-up">
-                        <p class="text-4xl font-bold font-playfair accent-gold">47</p>
-                        <p class="text-gray-600">Homes Sold This Year</p>
+                        <div class="listing-card bg-white">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2940&auto=format&fit=crop" alt="Modernist Lakefront Estate" class="w-full h-80 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-playfair mb-2">Modernist Lakefront Estate</h3>
+                                <p class="text-[var(--text-secondary)] mb-4">The Woodlands, TX</p>
+                                <p class="text-xl font-medium text-accent-color">Sold for $3,150,000</p>
+                            </div>
+                        </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-4xl font-bold font-playfair accent-gold">$22M+</p>
-                        <p class="text-gray-600">In Total Volume</p>
+                        <div class="listing-card bg-white">
+                            <img loading="lazy" src="https://images.unsplash.com/photo-1600585152225-357EA62c7a97?q=80&w=2940&auto=format&fit=crop" alt="The Oak Ridge Residence" class="w-full h-80 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-playfair mb-2">The Oak Ridge Residence</h3>
+                                <p class="text-[var(--text-secondary)] mb-4">Conroe, TX</p>
+                                <p class="text-xl font-medium text-accent-color">Sold for $2,800,000</p>
+                            </div>
+                        </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <p class="text-4xl font-bold font-playfair accent-gold">98%</p>
-                        <p class="text-gray-600">List-to-Sale Price</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <p class="text-4xl font-bold font-playfair accent-gold">12</p>
-                        <p class="text-gray-600">Years of Experience</p>
-                    </div>
+                </div>
+                <div class="text-center mt-16" data-aos="fade-up">
+                    <a href="#" class="btn">Explore All Properties</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20">
+        <section id="services" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3" data-aos="fade-right">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Johnathan Sterling" class="rounded-lg shadow-2xl w-full h-auto object-cover">
-                    </div>
-                    <div class="md:w-2/3" data-aos="fade-left">
-                        <h2 class="text-4xl font-playfair font-bold mb-4">A Legacy of Local Success</h2>
-                        <p class="text-gray-600 mb-6 leading-relaxed">With over a decade of dedicated experience in our community, I've built a reputation on trust, results, and an unwavering commitment to my clients. My approach combines deep local expertise with innovative marketing strategies to ensure your property stands out and sells for its maximum value. I don't just sell homes; I build lasting relationships and help you achieve your most ambitious real estate goals.</p>
-                        <div class="flex items-center space-x-8">
-                            <span class="text-sm font-semibold text-gray-500">As Featured In:</span>
-                            <img loading="lazy" src="https://placehold.co/100x40/f0f0f0/a0a0a0?text=Forbes" alt="Forbes Logo" class="h-6 opacity-60">
-                            <img loading="lazy" src="https://placehold.co/100x40/f0f0f0/a0a0a0?text=WSJ" alt="Wall Street Journal Logo" class="h-6 opacity-60">
-                             <img loading="lazy" src="https://placehold.co/120x40/f0f0f0/a0a0a0?text=RealtyToday" alt="Realty Today Logo" class="h-6 opacity-60">
-                        </div>
-                    </div>
+                 <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">A Concierge Level of Service</h2>
+                    <p class="text-[var(--text-secondary)]" data-aos="fade-up" data-aos-delay="100">Tailored strategies and dedicated support, from the initial consultation to the final closing and beyond.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="listings" class="bg-gray-50 py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-playfair font-bold text-center mb-12" data-aos="fade-up">Recently Sold Properties</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" data-aos="fade-up">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2940&auto=format&fit=crop" alt="Modern Family Home" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Modern Villa in the Hills</h3>
-                            <p class="text-gray-600 mb-2">Beverly Hills, CA</p>
-                            <p class="text-2xl font-playfair font-bold accent-gold mb-4">Sold for $4,250,000</p>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="text-center p-6" data-aos="fade-up">
+                        <h3 class="text-xl font-playfair mb-3">Strategic Acquisitions</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">For buyers, a discreet and discerning search for properties—both on and off-market—that align perfectly with your lifestyle and investment goals.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2950&auto=format&fit=crop" alt="Luxury Downtown Penthouse" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Downtown Penthouse Suite</h3>
-                            <p class="text-gray-600 mb-2">Los Angeles, CA</p>
-                            <p class="text-2xl font-playfair font-bold accent-gold mb-4">Sold for $3,100,000</p>
-                        </div>
+                    <div class="text-center p-6 border-x border-[var(--border-color)]" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-xl font-playfair mb-3">Bespoke Marketing</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">For sellers, a sophisticated marketing approach, utilizing cinematic videography, architectural photography, and targeted digital campaigns.</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" data-aos="fade-up" data-aos-delay="200">
-                        <img loading="lazy" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2940&auto=format&fit=crop" alt="Suburban Family Residence" class="w-full h-56 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Charming Suburban Estate</h3>
-                            <p class="text-gray-600 mb-2">Pasadena, CA</p>
-                            <p class="text-2xl font-playfair font-bold accent-gold mb-4">Sold for $2,800,000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-playfair font-bold text-center mb-12" data-aos="fade-up">What My Clients Say</h2>
-                <div class="flex overflow-x-auto space-x-8 pb-4" data-aos="fade-up">
-                    <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"Johnathan made selling our home a seamless and profitable experience. His market knowledge is second to none. We had an offer above asking in less than a week!"</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Sarah & Tom L.</p>
-                                <p class="text-sm text-gray-500">Sold in Beverly Hills</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"As first-time buyers, we were intimidated. Johnathan guided us with patience and expertise, helping us find our dream home within budget. Highly recommended!"</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Michael B.</p>
-                                <p class="text-sm text-gray-500">Bought in Pasadena</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"His strategic approach to marketing is what sets him apart. The professional photos, video, and online presence were incredible. He's a true professional."</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Emily R.</p>
-                                <p class="text-sm text-gray-500">Sold in Los Angeles</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"We couldn't have asked for a better realtor. Johnathan's negotiation skills are top-notch, and he was always available to answer our questions. A true master of his craft."</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/men/46.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">David Chen</p>
-                                <p class="text-sm text-gray-500">Bought in Santa Monica</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"From staging advice to closing day, Johnathan was with us every step of the way. His dedication and hard work resulted in a sale far exceeding our expectations."</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/women/55.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">Maria Garcia</p>
-                                <p class="text-sm text-gray-500">Sold in West Hollywood</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card flex-shrink-0 bg-gray-50 p-8 rounded-lg shadow-md">
-                        <p class="text-gray-600 mb-4">"An absolute pleasure to work with. Johnathan understood our unique needs and found us an off-market property that was the perfect fit for our family. Infinite thanks!"</p>
-                        <div class="flex items-center">
-                            <img loading="lazy" src="https://randomuser.me/api/portraits/men/76.jpg" alt="Client Photo" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <p class="font-bold">The Peterson Family</p>
-                                <p class="text-sm text-gray-500">Bought in Calabasas</p>
-                            </div>
-                        </div>
+                    <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-xl font-playfair mb-3">Design Consultation</h3>
+                        <p class="text-[var(--text-secondary)] leading-relaxed">Advisory services on interior styling, staging, and architectural enhancements to maximize a property's value and appeal.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="services" class="bg-gray-50 py-20">
+        <section class="py-20 md:py-32 bg-white/50">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-playfair font-bold text-center mb-12" data-aos="fade-up">Comprehensive Real Estate Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
-                    <div data-aos="fade-up">
-                        <div class="bg-accent-gold text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                 <div class="grid grid-cols-1 md:grid-cols-1 gap-16">
+                    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+                        <div class="testimonial-quote">
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6">"Isabella possesses a rare combination of market savvy and impeccable taste. She transformed what could have been a stressful process into a seamless, elegant experience. We couldn't be happier with the outcome and the beautiful home she helped us find."</p>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">For Sellers</h3>
-                        <p class="text-gray-600">Strategic pricing, world-class marketing, and expert negotiation to get you the highest possible return.</p>
+                        <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- The Atherton Family</p>
                     </div>
-                     <div data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-accent-gold text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-quote">
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6">"From the initial consultation to the final closing, Isabella's professionalism and dedication were second to none. Her marketing strategy was brilliant, attracting the perfect buyers in a matter of days. We are immensely grateful for her guidance."</p>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">For Buyers</h3>
-                        <p class="text-gray-600">Access to off-market listings, deep local insights, and dedicated support to find your perfect home.</p>
+                        <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Dr. and Mrs. Chen</p>
                     </div>
-                     <div data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-accent-gold text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-quote">
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6">"As an architect, I was particular about finding an agent who understood design. Isabella's appreciation for architecture is palpable. She didn't just sell a house; she sold a vision. Her expertise was invaluable."</p>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Staging & Design</h3>
-                        <p class="text-gray-600">Professional staging consultation to make your property irresistible to buyers from the first impression.</p>
+                        <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Marcus Thorne</p>
                     </div>
-                </div>
+                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-20">
+
+        <section id="contact" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="text-center">
-                    <h2 class="text-4xl font-playfair font-bold" data-aos="fade-up">Ready to Make Your Move?</h2>
-                    <p class="text-gray-600 mt-4 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Let's connect. Schedule a complimentary, no-obligation call to discuss your real estate goals.</p>
+                    <h2 class="text-3xl md:text-4xl font-playfair" data-aos="fade-up">Let's Begin the Journey</h2>
+                    <p class="text-[var(--text-secondary)] mt-4 mb-8 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">I invite you to schedule a private consultation to discuss your real estate aspirations. Reach out directly or use the form below.</p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="150">
+                        <a href="mailto:lukecott29@icloud.com" class="btn w-full sm:w-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Email Directly
+                        </a>
+                        <a href="tel:+13216549870" class="btn w-full sm:w-auto">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            Call Me
+                        </a>
+                    </div>
                 </div>
-                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-2xl" data-aos="fade-up" data-aos-delay="200">
-                    <form id="contact-form" action="https://formsubmit.co/lukecott29@icloud.com" method="POST">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
-                            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
+
+                <div class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <form id="contact-form" action="mailto:lukecott29@icloud.com" method="post" enctype="text/plain">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mb-6">
+                            <input type="text" name="Full_Name" placeholder="Full Name" class="w-full contact-input" required>
+                            <input type="email" name="Email_Address" placeholder="Email Address" class="w-full contact-input" required>
                         </div>
-                        <div class="mb-6">
-                             <select name="interest" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
-                                <option value="" disabled selected>I'm interested in...</option>
-                                <option value="Listing Strategy Call">Scheduling a Listing Strategy Call</option>
-                                <option value="Buyer Inquiry">A Buyer Inquiry</option>
-                                <option value="Home Valuation">A Free Home Valuation</option>
-                                <option value="General Question">A General Question</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-gold" required></textarea>
+                        <div class="mb-8">
+                            <textarea name="Message" placeholder="Your Message" rows="3" class="w-full contact-input" required></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="bg-accent-gold text-white font-bold py-3 px-12 rounded-lg hover:bg-opacity-90 transition transform hover:scale-105 shadow-lg">Send Message</button>
+                            <button type="submit" class="btn">Send Inquiry</button>
                         </div>
                     </form>
+                    <div id="form-message" class="text-center mt-6 text-[var(--accent)]"></div>
                 </div>
             </div>
         </section>
-
-        <section class="w-full h-96" data-aos="fade-up">
-            <iframe
-                class="w-full h-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.733528751841!2d-118.4018053847844!3d34.07362228060699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d67b35%3A0x29c4e8a4d5e1d2c!2sBeverly%20Hills%20Sign!5e0!3m2!1sen!2sus!4v1678886555555!5m2!1sen!2sus"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
-
     </main>
 
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-2xl font-playfair font-bold">Johnathan Sterling</p>
-            <p class="text-gray-400">Elite Realty Group</p>
-            <div class="my-6 flex justify-center space-x-6 text-gray-400">
-                 <a href="mailto:johnathan.sterling@eliterealty.com" class="flex items-center space-x-2 hover:text-white transition">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                    <span>Email</span>
-                </a>
-                <a href="tel:+1234567890" class="flex items-center space-x-2 hover:text-white transition">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a11.024 11.024 0 005.418 5.418l.759-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V5a1 1 0 011-1h.5z"></path></svg>
-                    <span>Call Now</span>
-                </a>
+    <footer class="bg-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+                 <div class="md:col-span-1">
+                     <a href="#" class="text-2xl font-playfair font-medium tracking-wide">Isabella Rossi</a>
+                     <p class="text-sm text-[var(--text-secondary)] mt-2">Curated Living</p>
+                 </div>
+                 <div class="md:col-span-1">
+                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Navigate</h4>
+                     <a href="#about" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">About</a>
+                     <a href="#listings" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Properties</a>
+                     <a href="#services" class="block mb-2 text-[var(--text-secondary)] hover:text-accent-color transition">Services</a>
+                 </div>
+                 <div class="md:col-span-1">
+                     <h4 class="font-semibold mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                     <div class="flex justify-center md:justify-start space-x-4 mb-4">
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Instagram</a>
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">Pinterest</a>
+                        <a href="#" class="text-[var(--text-secondary)] hover:text-accent-color transition">LinkedIn</a>
+                     </div>
+                     <a href="mailto:lukecott29@icloud.com" class="text-sm text-[var(--text-secondary)] hover:text-accent-color transition">lukecott29@icloud.com</a>
+                     <a href="tel:+13216549870" class="block text-sm text-[var(--text-secondary)] hover:text-accent-color transition mt-1">+1 (321) 654-9870</a>
+                 </div>
             </div>
-            <div class="flex justify-center space-x-6 my-6">
-                <a href="#" class="text-gray-400 hover:text-white transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-white transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0-2a7 7 0 110 14 7 7 0 010-14zm6.406-1.18a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" /></svg>
-                </a>
-                 <a href="#" class="text-gray-400 hover:text-white transition">
-                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
-                </a>
+            <div class="mt-20 pt-8 border-t border-[var(--border-color)] text-center text-xs text-gray-400">
+                <p>&copy; <span id="year"></span> Isabella Rossi Real Estate. Design inspired by bespoke digital studios.</p>
             </div>
-            <p class="text-gray-500 text-sm">
-                License #1234567 | Equal Housing Opportunity
-            </p>
-            <p class="text-gray-500 text-sm mt-2">
-                © <span id="year"></span> Johnathan Sterling. All Rights Reserved.
-            </p>
         </div>
     </footer>
 
@@ -390,7 +356,9 @@
         // Initialize AOS
         AOS.init({
             duration: 800,
+            easing: 'ease-in-out',
             once: true,
+            offset: 50,
         });
 
         // Mobile Menu Toggle
@@ -399,8 +367,7 @@
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
-        // Close mobile menu when a link is clicked
+        
         const mobileMenuLinks = mobileMenu.querySelectorAll('a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -408,23 +375,34 @@
             });
         });
         
-        // Sticky navigation background change on scroll
+        // Navigation Scroll Effect
         const navbar = document.getElementById('navbar');
         window.onscroll = function() {
             if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg');
+                navbar.classList.add('nav-scrolled');
             } else {
-                navbar.classList.remove('shadow-lg');
+                navbar.classList.remove('nav-scrolled');
             }
         };
 
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // NOTE: The original form submission script has been removed.
-        // The form now uses an external service (formsubmit.co) to send the email directly.
-        // This service will handle the "thank you" message after submission.
-
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', function(e) {
+            // The mailto: action will handle the submission.
+            // This script provides a fallback confirmation message.
+            setTimeout(() => {
+                formMessage.textContent = 'Thank you! Your email client has been opened to send your inquiry.';
+                contactForm.reset();
+            }, 500); // Small delay to allow mail client to open
+            
+            setTimeout(() => {
+                formMessage.textContent = '';
+            }, 6000); // Clear message after 6 seconds
+        });
     </script>
 </body>
 </html>
