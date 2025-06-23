@@ -143,6 +143,21 @@
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.05);
         }
 
+        /* Status Tag Styles */
+        .status-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .status-sold {
+            background-color: #FEE2E2; /* Light Red */
+            color: #991B1B;
+        }
+
     </style>
 
     <script type="application/ld+json">
@@ -225,7 +240,7 @@
         <section id="listings" class="py-20 md:py-32 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">Recently Sold</h2>
+                    <h2 class="text-3xl md:text-4xl font-playfair mb-4" data-aos="fade-up">Featured Properties</h2>
                     <p class="text-[var(--text-secondary)]" data-aos="fade-up" data-aos-delay="100">A look at some of the remarkable homes we have recently had the pleasure of representing.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -233,9 +248,11 @@
                         <div class="listing-card bg-white">
                             <img loading="lazy" src="https://nypost.com/wp-content/uploads/sites/2/2024/07/gimme-2700-85596881.jpg?quality=75&strip=all&w=1024" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EEE/31343C?text=Modern+Estate';" alt="Modernist Lakefront Estate" class="w-full h-80 object-cover">
                             <div class="p-8">
-                                <h3 class="text-2xl font-playfair mb-2">Modernist Lakefront Estate</h3>
-                                <p class="text-[var(--text-secondary)] mb-4">The Woodlands, TX</p>
-                                <p class="text-xl font-medium text-accent-color">Sold for $3,150,000</p>
+                                <div class="flex justify-between items-start">
+                                    <h3 class="text-2xl font-playfair leading-tight">Modernist Lakefront Estate</h3>
+                                    <span class="status-tag status-sold flex-shrink-0 ml-4">Sold</span>
+                                </div>
+                                <p class="text-[var(--text-secondary)] mt-2">The Woodlands, TX</p>
                             </div>
                         </div>
                     </div>
@@ -243,39 +260,44 @@
                         <div class="listing-card bg-white">
                             <img loading="lazy" src="https://townsquare.media/site/192/files/2024/08/attachment-3800-miramar-ave-highland-park-tx-75205-mls-20676418-zillow.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/EEE/31343C?text=Oak+Ridge';" alt="The Oak Ridge Residence" class="w-full h-80 object-cover">
                             <div class="p-8">
-                                <h3 class="text-2xl font-playfair mb-2">The Oak Ridge Residence</h3>
-                                <p class="text-[var(--text-secondary)] mb-4">Conroe, TX</p>
-                                <p class="text-xl font-medium text-accent-color">Sold for $2,800,000</p>
+                                <div class="flex justify-between items-start">
+                                    <h3 class="text-2xl font-playfair leading-tight">The Oak Ridge Residence</h3>
+                                    <span class="status-tag status-sold flex-shrink-0 ml-4">Sold</span>
+                                </div>
+                                <p class="text-[var(--text-secondary)] mt-2">Conroe, TX</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="text-center mt-16" data-aos="fade-up">
+                    <a href="listings.html" class="btn">See More Properties</a>
+                </div>
             </div>
         </section>
         
-        <section id="testimonials" class="py-20 md:py-32 bg-gray-50">
+        <section id="testimonials" class="py-20 md:py-32 bg-white">
              <div class="container mx-auto px-6">
                   <h2 class="text-3xl md:text-4xl font-playfair text-center mb-16" data-aos="fade-up">Words from My Clients</h2>
                   
                   <div class="max-w-3xl mx-auto grid grid-cols-1 gap-12" data-aos="fade-up" data-aos-delay="100">
-                      
-                      <div class="testimonial-card text-center">
-                          <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
-                          <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"Isabella possesses a rare combination of market savvy and impeccable taste. She transformed what could have been a stressful process into a seamless, elegant experience. We couldn't be happier with the outcome and the beautiful home she helped us find."</p>
-                          <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- The Atherton Family</p>
-                      </div>
+                       
+                        <div class="testimonial-card text-center">
+                            <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"Isabella possesses a rare combination of market savvy and impeccable taste. She transformed what could have been a stressful process into a seamless, elegant experience. We couldn't be happier with the outcome and the beautiful home she helped us find."</p>
+                            <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- The Atherton Family</p>
+                        </div>
 
-                      <div class="testimonial-card text-center">
-                           <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
-                          <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"From the initial consultation to the final closing, Isabella's professionalism and dedication were second to none. Her marketing strategy was brilliant, attracting the perfect buyers in a matter of days. We are immensely grateful for her guidance."</p>
-                          <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Dr. and Mrs. Chen</p>
-                      </div>
+                        <div class="testimonial-card text-center">
+                            <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"From the initial consultation to the final closing, Isabella's professionalism and dedication were second to none. Her marketing strategy was brilliant, attracting the perfect buyers in a matter of days. We are immensely grateful for her guidance."</p>
+                            <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Dr. and Mrs. Chen</p>
+                        </div>
 
-                       <div class="testimonial-card text-center">
-                           <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
-                           <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"As an architect, I was particular about finding an agent who understood design. Isabella's appreciation for architecture is palpable. She didn't just sell a house; she sold a vision. Her expertise was invaluable."</p>
-                           <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Marcus Thorne</p>
-                      </div>
+                         <div class="testimonial-card text-center">
+                            <svg class="w-12 h-12 mx-auto mb-6 text-gray-200" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.352,4C4.456,4,0,8.456,0,13.352v9.296C0,27.544,4.456,32,9.352,32c4.896,0,8.648-4.456,8.648-9.352 v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352c-0.352,0.352-0.352,0.352,0,0.704 c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704c0.704,0,1.056,0.352,1.056,1.056v1.752 C14.648,22.456,12.4,24,9.352,24c-2.152,0-3.2-1.4-3.2-3.2v-7.352c0-2.152,1.056-3.2,3.2-3.2 c2.152,0,3.2,1.056,3.2,3.2v0.704C12.552,15.16,12.552,16.216,11.5,16.216c-1.056,0-1.056-1.056-1.056-1.056 C10.448,12.304,10.096,8.856,9.352,4z M22.648,4c-4.896,0-9.352,4.456-9.352,9.352v9.296c0,4.896,4.456,9.352,9.352,9.352 c4.896,0,8.648-4.456,8.648-9.352v-1.352c0-2.896-1.704-5.544-4.648-5.544c-1.2,0-2.896,0.352-3.648,1.352 c-0.352,0.352-0.352,0.352,0,0.704c0.352,0.352,0.704,0.352,1.056,0c0.704-0.704,2.152-0.704,2.896-0.704 c0.704,0,1.056,0.352,1.056,1.056v1.752c0,4.896-2.152,6.648-5.2,6.648c-2.152,0-3.2-1.4-3.2-3.2v-7.352 c0-2.152,1.056-3.2,3.2-3.2c2.152,0,3.2,1.056,3.2,3.2v0.704c0,1.056,0,2.112-1.056,2.112c-1.056,0-1.056-1.056-1.056-1.056 C23.904,12.304,23.552,8.856,22.648,4z"></path></svg>
+                            <p class="text-xl md:text-2xl font-light leading-relaxed mb-6 text-gray-700">"As an architect, I was particular about finding an agent who understood design. Isabella's appreciation for architecture is palpable. She didn't just sell a house; she sold a vision. Her expertise was invaluable."</p>
+                            <p class="font-semibold uppercase tracking-widest text-sm text-[var(--text-secondary)]">- Marcus Thorne</p>
+                        </div>
 
                   </div>
              </div>
